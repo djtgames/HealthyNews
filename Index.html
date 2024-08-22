@@ -1,171 +1,51 @@
-<!DOCTYPE html>
+<H1><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HealthyNews</title>
+    <title>Healthy News</title>
     <style>
-        /* Basic CSS Styles */
         body {
             font-family: Arial, sans-serif;
+            text-align: center;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            color: #333;
-        }
-
-        header {
-            background-color: #2c3e50;
-            color: #ecf0f1;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 15px;
-        }
-
-        nav ul li a {
-            color: #ecf0f1;
-            text-decoration: none;
-            font-weight: bold;
         }
 
         .container {
-            width: 80%;
-            margin: 20px auto;
+            margin-top: 50px;
         }
 
-        .news-item {
-            background-color: #fff;
-            margin-bottom: 20px;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        h1 {
+            color: #333;
         }
 
-        .news-item h2 {
-            margin-top: 0;
-            color: #2c3e50;
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
         }
 
-        .news-item p {
-            color: #7f8c8d;
-        }
-
-        .footer {
-            background-color: #2c3e50;
-            color: #ecf0f1;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                width: 95%;
-            }
-
-            nav ul li {
-                display: block;
-                margin-bottom: 10px;
-                text-align: center;
-            }
+        .button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>HealthyNews</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#nutrition">Nutrition</a></li>
-                <li><a href="#fitness">Fitness</a></li>
-                <li><a href="#mental-health">Mental Health</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="container" id="news-container">
-        <!-- AI-Generated News Items -->
-        <div class="news-item" id="nutrition">
-            <h2>5 Surprising Benefits of a Plant-Based Diet</h2>
-            <p>Switching to a plant-based diet can have profound effects on your health. Not only does it lower your risk of chronic diseases, but it also improves digestion, boosts energy levels, and contributes to a healthier environment. Learn how incorporating more plants into your diet can lead to a healthier and happier life.</p>
-        </div>
-
-        <div class="news-item" id="fitness">
-            <h2>The Ultimate Guide to HIIT Workouts</h2>
-            <p>High-Intensity Interval Training (HIIT) is one of the most effective ways to burn fat, build muscle, and improve cardiovascular health in a short amount of time. This guide covers everything you need to know about HIIT, from beginner tips to advanced techniques. Get ready to push your limits and see real results.</p>
-        </div>
-
-        <div class="news-item" id="mental-health">
-            <h2>Mindfulness Practices to Reduce Stress and Anxiety</h2>
-            <p>In today's fast-paced world, stress and anxiety are all too common. Mindfulness practices, such as meditation and deep breathing, can help you stay grounded and present, reducing the negative impacts of stress on your mental and physical health. Discover simple yet powerful mindfulness techniques you can incorporate into your daily routine.</p>
-        </div>
-
-        <div class="news-item" id="wellness">
-            <h2>The Power of Sleep: How to Improve Your Sleep Quality</h2>
-            <p>Sleep is essential for overall health and well-being. Poor sleep quality can lead to a host of health problems, including weakened immunity, weight gain, and cognitive decline. Learn practical tips and strategies to improve your sleep hygiene and ensure you get the restful sleep your body needs.</p>
-        </div>
-
-        <div class="news-item" id="nutrition">
-            <h2>10 Superfoods You Should Be Eating Right Now</h2>
-            <p>Superfoods are nutrient-rich foods that provide significant health benefits. From blueberries and kale to quinoa and chia seeds, these superfoods can help you maintain a balanced diet, boost your immune system, and prevent chronic diseases. Find out which superfoods should be on your shopping list.</p>
-        </div>
+    <div class="container">
+        <h1>Navigation Page</h1>
+        <a href="page1.html" class="button">Go to Page 1</a>
+        <a href="page2.html" class="button">Go to Page 2</a>
+        <a href="page3.html" class="button">Go to Page 3</a>
+        <a href="page4.html" class="button">Go to Page 4</a>
     </div>
-
-    <footer class="footer">
-        <p>&copy; 2024 HealthyNews. All rights reserved.</p>
-    </footer>
-
-    <script>
-        // Function to add a new article with password protection
-        function addArticle(title, content) {
-            const password = prompt("Enter the password to add a new article:");
-
-            if (password === "HealthyNews123") {
-                // Create a new div for the article
-                const newArticle = document.createElement("div");
-                newArticle.classList.add("news-item");
-
-                // Create the title element
-                const newTitle = document.createElement("h2");
-                newTitle.textContent = title;
-                newArticle.appendChild(newTitle);
-
-                // Create the content paragraph
-                const newContent = document.createElement("p");
-                newContent.textContent = content;
-                newArticle.appendChild(newContent);
-
-                // Append the new article to the news container
-                document.getElementById("news-container").appendChild(newArticle);
-
-                alert("New article added successfully!");
-            } else {
-                alert("Incorrect password. Article not added.");
-            }
-        }
-
-        // Example: Adding an article from the console with a password
-        // Type the following in the console to add a new article:
-        // addArticle("New Health Tips", "Here are some new health tips to help you stay fit and healthy...")
-    </script>
 </body>
 </html>
